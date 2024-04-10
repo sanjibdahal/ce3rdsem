@@ -10,7 +10,7 @@ LinkedList::LinkedList()
 }
 
 LinkedList::~LinkedList() {
-    
+    delete this;
 }
 
 bool LinkedList::isEmpty()
@@ -28,6 +28,19 @@ void LinkedList::addToHead(int data)
     }
 
     HEAD = newNode;
+}
+
+void LinkedList::addToTail(int data) {
+    Node *newNode = new Node(data);
+
+    if (this->isEmpty())
+    {
+        HEAD = newNode;
+    } else {
+        TAIL->next = newNode;
+    }
+    
+    TAIL = newNode;
 }
 
 void LinkedList::print(char separator)

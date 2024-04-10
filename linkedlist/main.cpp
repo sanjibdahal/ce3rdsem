@@ -10,7 +10,10 @@ int main()
     list.addToHead(46);
     list.addToHead(50);
 
-    list.print(' ');
+    list.addToTail(55);
+    list.addToTail(90);
 
+    list.print(' ');
+    
     return 0;
 }

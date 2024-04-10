@@ -13,5 +13,20 @@ class LinkedList {
         Node *HEAD;
         Node *TAIL;
     public:
-        
+        LinkedList();
+        ~LinkedList();
+
+        void add(Node *pred, int data);
+        void addToHead(int data);
+        void addToTail(int data);
+
+        bool remove(int data);
+        bool removeFromHead(int &data);
+        bool removeFromTail(int &data);
+
+        bool isEmpty();
+
+        void head(int &data);
+
+        void print(char separator);
 };

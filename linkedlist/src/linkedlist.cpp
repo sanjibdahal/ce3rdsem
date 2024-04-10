@@ -5,17 +5,18 @@ using namespace std;
 
 LinkedList::LinkedList()
 {
-    this->HEAD = NULL;
-    this->TAIL = NULL;
+    HEAD = nullptr;
+    TAIL = nullptr;
 }
 
-LinkedList::~LinkedList() {
+LinkedList::~LinkedList()
+{
     delete this;
 }
 
 bool LinkedList::isEmpty()
 {
-    return HEAD == NULL;
+    return HEAD == nullptr && TAIL == nullptr;
 }
 
 void LinkedList::addToHead(int data)
@@ -30,20 +31,23 @@ void LinkedList::addToHead(int data)
     HEAD = newNode;
 }
 
-void LinkedList::addToTail(int data) {
+void LinkedList::addToTail(int data)
+{
     Node *newNode = new Node(data);
 
     if (this->isEmpty())
     {
         HEAD = newNode;
-    } else {
+    }
+    else
+    {
         TAIL->next = newNode;
     }
-    
+
     TAIL = newNode;
 }
 
-void LinkedList::print(char separator)
+void LinkedList::print(char separator = ' ')
 {
     cout << "Contents of list:" << endl;
     for (Node *t = HEAD; t != NULL; t = t->next)
@@ -52,3 +56,22 @@ void LinkedList::print(char separator)
     }
     cout << endl;
 }
+
+bool LinkedList::removeFromHead(int &data)
+{
+    if (HEAD == nullptr)
+    {
+        cout << "No data to delete";
+        return 0;
+    }
+    Node *nodeToDelete = HEAD;
+    data = nodeToDelete->info;
+    HEAD = HEAD->next;
+    delete nodeToDelete; 
+    return 1;
+}
+
+// bool LinkedList::removeFromTail(int &data)
+// {
+//     return 0;
+// }

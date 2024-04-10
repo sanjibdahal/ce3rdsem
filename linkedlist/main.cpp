@@ -14,6 +14,11 @@ int main()
     list.addToTail(90);
 
     list.print(' ');
-    
+    int element;
+    list.removeFromHead(element);
+    cout << element << " removed" << endl;
+
+    list.print();
+
     return 0;
 }

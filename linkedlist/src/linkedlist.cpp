@@ -59,19 +59,47 @@ void LinkedList::print(char separator = ' ')
 
 bool LinkedList::removeFromHead(int &data)
 {
-    if (HEAD == nullptr)
+    if(!this->isEmpty())
     {
-        cout << "No data to delete";
-        return 0;
+        Node *nodeToDelete = HEAD;
+        data = nodeToDelete->info;
+        HEAD = HEAD->next;
+        if (HEAD == nullptr)
+        {
+            TAIL = nullptr;
+        }
+        delete nodeToDelete; 
+        return 1;
     }
-    Node *nodeToDelete = HEAD;
-    data = nodeToDelete->info;
-    HEAD = HEAD->next;
-    delete nodeToDelete; 
-    return 1;
+    throw "No data to delete";
+    return -1;
 }
 
-// bool LinkedList::removeFromTail(int &data)
-// {
-//     return 0;
-// }
+bool LinkedList::removeFromTail(int &data)
+{
+    if(!this->isEmpty()) {
+        Node *nodeToDelete = TAIL;
+        data = nodeToDelete->info;
+        if (HEAD==TAIL)
+        {
+            HEAD = nullptr;
+            TAIL = nullptr;
+            delete nodeToDelete;
+            return 1;
+        }
+        
+        Node *temp = HEAD;
+        while(temp->next != TAIL)
+        {
+            temp = temp->next;
+        }
+
+        TAIL->next = nullptr;
+        TAIL = temp;
+        delete nodeToDelete;
+        return 1;
+    }
+
+    throw "No data to delete";
+    return -1;
+}

@@ -5,7 +5,7 @@ public:
     Node *next;
 
     Node() {}
-    Node(int d) : info(d), next(nullptr) {}
+    Node(int d) : info(d), next(NULL) {}
     Node(int d, Node *next) : info(d), next(next) {}
 };
 

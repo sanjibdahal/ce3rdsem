@@ -19,17 +19,16 @@ public:
     LinkedList();
     ~LinkedList();
 
-    void add(Node *pred, int data);
+    bool isEmpty();
     void addToHead(int data);
     void addToTail(int data);
+    void add(Node *pred, int data);
 
-    bool remove(int data);
     bool removeFromHead(int &data);
     bool removeFromTail(int &data);
+    bool remove(int data);
 
-    bool isEmpty();
-
-    // void head(int &data);
-
-    void print(char separator);
+    bool retrieve(int data, Node *output);
+    bool search(int data);
+    void traverse(char separator);
 };

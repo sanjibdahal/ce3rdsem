@@ -1,4 +1,4 @@
-#include "./stack.h"
+#include "stack.h"
 class ArrayStack : public Stack
 {
     private:

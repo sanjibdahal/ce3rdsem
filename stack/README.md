@@ -1,11 +1,14 @@
 ### This is the stack implementation using array and linkedlist.
 
-**To run the stack**
+#### To run the stack
+**For ArrayStack**
 ```bash
-# For ArrayStack
 cd stack
 g++ -I include main.cpp src/ArrayStack.cpp
-# For LinkedlistStack
+```
+
+**For LinkedlistStack**
+```bash
 cd stack
 g++ -I include main.cpp src/LinkedlistStack.cpp src/linkedlist.cpp
 ```

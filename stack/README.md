@@ -10,5 +10,5 @@ g++ -I include main.cpp src/ArrayStack.cpp
 **For LinkedlistStack**
 ```bash
 cd stack
-g++ -I include main.cpp src/LinkedlistStack.cpp src/linkedlist.cpp
+g++ -I include main.cpp src/LinkedListStack.cpp src/LinkedList.cpp
 ```

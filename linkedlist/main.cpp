@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    try
+    try   
     {
         LinkedList list;
         list.addToHead(10);
@@ -13,14 +13,6 @@ int main()
         list.addToTail(50);
         list.traverse(' ');
         // 10 34 46 50
-
-
-
-
-
-
-
-        
 
         // if(list.search(34)) {
         //     cout << "Found" << endl;

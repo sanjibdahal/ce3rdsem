@@ -1,17 +1,17 @@
-#include "stack.h"
+#include "Stack.h"
+#include "LinkedList.h"
 
 class LinkedListStack : public Stack
 {
 private:
     LinkedList stack;
-    int topIndex;
 
 public:
     LinkedListStack();
-    ~LinkedListStack() {}
     bool isEmpty();
-    bool isFull() const;
+    ~LinkedListStack();
+    bool isFull();
     void push(const int element);
     bool pop(int &element);
-    bool top(int &element) const;
+    bool top(int &element);
 };

@@ -1,4 +1,4 @@
-#include "stack.h"
+#include "Stack.h"
 class ArrayStack : public Stack
 {
     private:
@@ -12,9 +12,9 @@ class ArrayStack : public Stack
         {
             delete[] data;
         }
-        bool isEmpty() const;
-        bool isFull() const;
+        bool isEmpty();
+        bool isFull();
         void push(const int element);
         bool pop(int &element);
-        bool top(int &element) const;
+        bool top(int &element);
 };

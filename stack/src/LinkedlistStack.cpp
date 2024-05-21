@@ -1,32 +1,34 @@
 #include <iostream>
-#include "LinkedlistStack.h"
-#include "linkedlist.h"
+#include "LinkedListStack.h"
 
 using namespace std;
 
 LinkedListStack::LinkedListStack() {}
+
+LinkedListStack::~LinkedListStack() {
+    stack.~LinkedList();
+}
 
 bool LinkedListStack::isEmpty()
 {
     return stack.isEmpty();
 }
 
-// bool LinkedListStack::isFull() const {
-//     return topIndex == maxStackSize - 1;
-// }
+bool LinkedListStack::isFull()
+{
+    return false;
+}
 
 void LinkedListStack::push(const int element)
 {
-    topIndex++;
-    data[topIndex] = element;
+    stack.addToHead(element);
 }
 
 bool LinkedListStack::pop(int &element)
 {
-    if (!isEmpty())
+    if (!stack.isEmpty())
     {
-        topIndex--;
-        element = data[topIndex + 1];
+        stack.removeFromHead(element);
         return true;
     }
     else
@@ -36,11 +38,11 @@ bool LinkedListStack::pop(int &element)
     }
 }
 
-bool LinkedListStack::top(int &element) const
+bool LinkedListStack::top(int &element)
 {
-    if (!isEmpty())
+    if (!stack.isEmpty())
     {
-        element = data[topIndex];
+        element = stack.HEAD->info;
         return true;
     }
     else

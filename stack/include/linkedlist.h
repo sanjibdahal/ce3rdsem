@@ -13,10 +13,10 @@ public:
 class LinkedList
 {
 private:
-    Node *HEAD;
-    Node *TAIL;
 
 public:
+    Node *HEAD;
+    Node *TAIL;
     LinkedList();
     ~LinkedList();
 

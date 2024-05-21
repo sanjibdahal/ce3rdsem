@@ -5,11 +5,11 @@ using namespace std;
 
 ArrayStack::ArrayStack(int size) : maxStackSize(size), topIndex(-1), data(new int[size]) {}
 
-bool ArrayStack::isEmpty() const {
+bool ArrayStack::isEmpty() {
     return topIndex < 0;
 }
 
-bool ArrayStack::isFull() const {
+bool ArrayStack::isFull() {
     return topIndex == maxStackSize - 1;
 }
 
@@ -33,7 +33,7 @@ bool ArrayStack::pop(int &element) {
     }
 }
 
-bool ArrayStack::top(int &element) const {
+bool ArrayStack::top(int &element) {
     if(!isEmpty()) {
         element = data[topIndex];
         return true;

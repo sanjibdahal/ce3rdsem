@@ -1,2 +1,0 @@
-
-        // cout << outputPtr.info << endl;

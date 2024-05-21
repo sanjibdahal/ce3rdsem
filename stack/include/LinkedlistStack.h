@@ -8,8 +8,8 @@ private:
 
 public:
     LinkedListStack();
-    bool isEmpty();
     ~LinkedListStack();
+    bool isEmpty();
     bool isFull();
     void push(const int element);
     bool pop(int &element);

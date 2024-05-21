@@ -8,10 +8,10 @@ private:
 
 public:
     LinkedListStack();
-    ~LinkedListStack();
-    bool isEmpty();
-    bool isFull();
-    void push(const int element);
-    bool pop(int &element);
-    bool top(int &element);
+    virtual ~LinkedListStack();
+    virtual bool isEmpty();
+    virtual bool isFull();
+    virtual void push(const int element);
+    virtual bool pop(int &element);
+    virtual bool top(int &element);
 };

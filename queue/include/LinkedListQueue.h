@@ -4,15 +4,10 @@
 class LinkedListQueue : public Queue
 {
     private:
-        LinkedList *queue;
-        int frontIndex;
-        int rearIndex;
+        LinkedList queue;
     public:
         LinkedListQueue();
-        ~LinkedListQueue()
-        {
-            delete[] queue;
-        }
+        virtual ~LinkedListQueue();
         virtual bool isEmpty();
         virtual bool isFull();
         virtual bool enqueue(const int element);

@@ -1,28 +1,26 @@
 #include <iostream>
-#include "LinkedlistStack.h"
-// #include "ArrayStack.h"
-
+#include "LinkedListStack.h"
 using namespace std;
 
 int main()
 {
-    // Stack *s = new ArrayStack(10);
     Stack *s = new LinkedListStack();
+    cout << "Is stack empty: " << s->isEmpty() << endl;
     s->push(10);
     s->push(9);
+    cout << "Is stack empty: " << s->isEmpty() << endl;
+    cout << "Is stack full: " << s->isFull() << endl;
 
     int element;
 
-    cout << s->top(element) << endl;
-    cout << element << endl;
-
-    cout << s->pop(element) << endl;
-    cout << element << endl;
-
-    cout << s->pop(element) << endl;
-    cout << element << endl;
-    cout << s->pop(element) << endl;
-    s->push(8);
     s->top(element);
-    cout << element << endl;
+    cout << "Top element: " << element << endl;
+
+    s->pop(element);
+    cout << "Popped element: " << element << endl;
+
+    s->pop(element);
+    cout << "Popped element: " << element << endl;
+
+    s->pop(element);
 }
